@@ -15,6 +15,11 @@ const MOCK_USER = {
   password: 'password123'
 };
 
+// Root Route
+app.get('/', (req, res) => {
+  res.json({ message: 'Netflix Clone Backend API is running successfully!' });
+});
+
 // Login Route
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
