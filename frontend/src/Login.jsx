@@ -24,7 +24,8 @@ const Login = () => {
 
     try {
       // API Call to our Express backend
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const API_URL = import.meta.env.VITE_API_URL || 'https://netflix-clone-s1v0.onrender.com';
+      const response = await axios.post(`${API_URL}/api/login`, {
         email,
         password
       });
